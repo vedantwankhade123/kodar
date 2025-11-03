@@ -1,0 +1,148 @@
+  /* Custom styles for the sliding animation */
+  body {
+      font-family: 'Inter', sans-serif;
+  }
+
+  /* Container for the forms */
+  .form-container {
+      position: absolute;
+      top: 5px;
+      /* Added margin */
+      height: calc(100% - 10px);
+      /* Added margin */
+      transition: all 0.6s ease-in-out;
+      border-radius: 1.5rem;
+      /* Added rounding */
+  }
+
+  .sign-in-container {
+      left: 5px;
+      /* Added margin */
+      width: calc(50% - 10px);
+      /* Adjusted for margins */
+      z-index: 2;
+  }
+
+  /* Sign-up form starts hidden, moved to the left */
+  .sign-up-container {
+      left: 5px;
+      /* Added margin */
+      width: calc(50% - 10px);
+      /* Adjusted for margins */
+      opacity: 0;
+      z-index: 1;
+      /* transform: translateX(100%); */
+      /* <-- REMOVE THIS LINE */
+  }
+
+  /* Container for the overlay panels */
+  .overlay-container {
+      position: absolute;
+      top: 5px;
+      /* Added margin */
+      left: calc(50% + 5px);
+      /* Adjusted for margins */
+      width: calc(50% - 10px);
+      /* Adjusted for margins */
+      height: calc(100% - 10px);
+      /* Added margin */
+      overflow: hidden;
+      transition: transform 0.6s ease-in-out;
+      z-index: 100;
+      border-radius: 1.5rem;
+      /* Added rounding */
+  }
+
+  /* The overlay itself with the gradient */
+  .overlay {
+      background: #6366F1;
+      /* indigo-500 */
+      /* Updated gradient effect */
+      background: linear-gradient(to right bottom, #7C3AED, #4F46E5, #3B82F6);
+      /* from-purple-600 via-indigo-600 to-blue-500 */
+      color: #FFFFFF;
+      position: relative;
+      left: -100%;
+      height: 100%;
+      width: 200%;
+      transform: translateX(0);
+      transition: transform 0.6s ease-in-out;
+  }
+
+  .overlay-panel {
+      position: absolute;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      /* padding: 0 40px; */
+      height: 100%;
+      width: 50%;
+      transform: translateX(0);
+      transition: transform 0.6s ease-in-out;
+  }
+
+  .overlay-left {
+      transform: translateX(-20%);
+  }
+
+  .overlay-right {
+      right: 0;
+      transform: translateX(0);
+  }
+
+  /* --- Animation classes --- */
+  /* When right-panel-active is added to the main container */
+
+  /* Move Sign-in form to the left and hide */
+  .container.right-panel-active .sign-in-container {
+      transform: translateX(calc(100% + 10px));
+      /* Fixed: Account for 10px gutter */
+      opacity: 0;
+  }
+
+  /* Move Overlay container to the left */
+  .container.right-panel-active .overlay-container {
+      transform: translateX(calc(-100% - 10px));
+      /* Fixed: Account for 10px gutter */
+  }
+
+  /* Bring Sign-up form into view */
+  .container.right-panel-active .sign-up-container {
+      transform: translateX(calc(100% + 10px));
+      /* Fixed: Account for 10px gutter */
+      opacity: 1;
+      z-index: 5;
+      animation: show 0.6s;
+  }
+
+  @keyframes show {
+
+      0%,
+      49.99% {
+          opacity: 0;
+          z-index: 1;
+      }
+
+      50%,
+      100% {
+          opacity: 1;
+          z-index: 5;
+      }
+  }
+
+  /* Move overlay panel to the right */
+  .container.right-panel-active .overlay {
+      transform: translateX(50%);
+  }
+
+  /* Show the "Hello, Friend!" panel */
+  .container.right-panel-active .overlay-left {
+      transform: translateX(0);
+  }
+
+  /* Hide the "Welcome Back!" panel */
+  .container.right-panel-active .overlay-right {
+      transform: translateX(20%);
+  }

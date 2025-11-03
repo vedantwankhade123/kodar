@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modern Authentication</title>
+    <!-- Load Tailwind CSS from CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Use Inter font family -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body class="bg-gradient-to-br from-indigo-100 to-purple-200 flex justify-center items-center min-h-screen p-4">
+
+    <!-- Main Container -->
+    <div id="main-container"
+        class="container bg-white rounded-2xl shadow-2xl relative overflow-hidden w-full max-w-4xl min-h-[580px]"
+        style="margin-top: 5px; margin-right: 5px; margin-bottom: 5px;">
+
+        <!-- Sign Up Form -->
+        <div class="form-container sign-up-container">
+            <form action="#"
+                class="bg-white flex flex-col items-center justify-center h-full px-8 sm:px-12 text-center">
+                <h1 class="text-3xl font-bold text-gray-900 mb-4">Create Account</h1>
+                <div class="flex my-4">
+                    <!-- Social Icons -->
+                    <!-- Google -->
+                    <a href="#"
+                        class="border border-gray-300 rounded-full h-10 w-10 flex items-center justify-center mx-1 text-gray-600 hover:bg-gray-100 transition-all">
+                        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                            <path
+                                d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-.95 2.53-1.9 3.31v2.77h3.57c2.08-1.92 3.28-4.79 3.28-8.09z"
+                                clip-rule="evenodd" fill-rule="evenodd" />
+                            <path
+                                d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z"
+                                clip-rule="evenodd" fill-rule="evenodd" />
+                            <path
+                                d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l3.66-2.84z"
+                                clip-rule="evenodd" fill-rule="evenodd" />
+                            <path
+                                d="M12 5.38c1.62 0 3.06.56 4.21 1.69l3.16-3.16C17.46 2.14 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z"
+                                clip-rule="evenodd" fill-rule="evenodd" />
+                        </svg>
+                    </a>
+                    <!-- Facebook -->
+                    <a href="#"
+                        class="border border-gray-300 rounded-full h-10 w-10 flex items-center justify-center mx-1 text-gray-600 hover:bg-gray-100 transition-all">
+                        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                            <path
+                                d="M12.0001 2.00016C5.37212 2.00016 0 7.37228 0 14.0002C0 19.991 4.05284 25.132 9.5843 25.8645V16.7408H6.69654V13.0487H9.5843V10.3087C9.5843 7.43841 11.3481 5.86816 13.9103 5.86816C15.136 5.86816 16.1951 5.96195 16.4802 6.00287V9.21557H14.7813C13.3557 9.21557 12.9691 10.0526 12.9691 11.0118V13.0487H16.331L15.825 16.7408H12.9691V25.9102C18.667 25.3049 23.1476 20.247 24 14.0002C24 7.37228 18.6279 2.00016 12.0001 2.00016Z" />
+                        </svg>
+                    </a>
+
+                    <!-- GitHub -->
+                    <a href="#"
+                        class="border border-gray-300 rounded-full h-10 w-10 flex items-center justify-center mx-1 text-gray-600 hover:bg-gray-100 transition-all">
+                        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                            <path
+                                d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.067c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.108-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.91 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576C20.566 21.797 24 17.3 24 12c0-6.627-5.373-12-12-12z" />
+                        </svg>
+                    </a>
+                </div>
+                <span class="text-gray-600 text-sm mb-4">or use your email for registration</span>
+                <input type="text" placeholder="Name"
+                    class="bg-gray-100 border border-gray-300 rounded-lg w-full p-3 mb-4 focus:outline-none focus:ring-2 focus:ring-indigo-500" />
+                <input type="email" placeholder="Email"
+                    class="bg-gray-100 border border-gray-300 rounded-lg w-full p-3 mb-4 focus:outline-none focus:ring-2 focus:ring-indigo-500" />
+                <input type="password" placeholder="Password"
+                    class="bg-gray-100 border border-gray-300 rounded-lg w-full p-3 mb-4 focus:outline-none focus:ring-2 focus:ring-indigo-500" />
+                <button
+                    class="bg-indigo-600 text-white font-bold uppercase text-sm px-10 py-3 rounded-full hover:bg-indigo-700 transition-all duration-300 shadow-lg hover:shadow-md">Sign
+                    Up</button>
+                <p class="text-gray-600 text-sm mt-4">
+                    Already have an account?
+                    <span id="signInLink"
+                        class="font-bold text-indigo-600 hover:text-indigo-700 cursor-pointer transition-all">Sign
+                        In</span>
+                </p>
+            </form>
+        </div>
+
+        <!-- Sign In Form -->
+        <div class="form-container sign-in-container">
+            <form action="#"
+                class="bg-white flex flex-col items-center justify-center h-full px-8 sm:px-12 text-center">
+                <h1 class="text-3xl font-bold text-gray-900 mb-4">Sign In</h1>
+                <div class="flex my-4">
+                    <!-- Social Icons -->
+                    <!-- Google -->
+                    <a href="#"
+                        class="border border-gray-300 rounded-full h-10 w-10 flex items-center justify-center mx-1 text-gray-600 hover:bg-gray-100 transition-all">
+                        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                            <path
+                                d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-.95 2.53-1.9 3.31v2.77h3.57c2.08-1.92 3.28-4.79 3.28-8.09z"
+                                clip-rule="evenodd" fill-rule="evenodd" />
+                            <path
+                                d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z"
+                                clip-rule="evenodd" fill-rule="evenodd" />
+                            <path
+                                d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l3.66-2.84z"
+                                clip-rule="evenodd" fill-rule="evenodd" />
+                            <path
+                                d="M12 5.38c1.62 0 3.06.56 4.21 1.69l3.16-3.16C17.46 2.14 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z"
+                                clip-rule="evenodd" fill-rule="evenodd" />
+                        </svg>
+                    </a>
+                    <!-- Facebook -->
+                    <a href="#"
+                        class="border border-gray-300 rounded-full h-10 w-10 flex items-center justify-center mx-1 text-gray-600 hover:bg-gray-100 transition-all">
+                        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                            <path
+                                d="M12.0001 2.00016C5.37212 2.00016 0 7.37228 0 14.0002C0 19.991 4.05284 25.132 9.5843 25.8645V16.7408H6.69654V13.0487H9.5843V10.3087C9.5843 7.43841 11.3481 5.86816 13.9103 5.86816C15.136 5.86816 16.1951 5.96195 16.4802 6.00287V9.21557H14.7813C13.3557 9.21557 12.9691 10.0526 12.9691 11.0118V13.0487H16.331L15.825 16.7408H12.9691V25.9102C18.667 25.3049 23.1476 20.247 24 14.0002C24 7.37228 18.6279 2.00016 12.0001 2.00016Z" />
+                        </svg>
+                    </a>
+
+
+                    <!-- GitHub -->
+                    <a href="#"
+                        class="border border-gray-300 rounded-full h-10 w-10 flex items-center justify-center mx-1 text-gray-600 hover:bg-gray-100 transition-all">
+                        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                            <path
+                                d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.067c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.108-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.91 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576C20.566 21.797 24 17.3 24 12c0-6.627-5.373-12-12-12z" />
+                        </svg>
+                    </a>
+                </div>
+                <span class="text-gray-600 text-sm mb-4">or use your account</span>
+                <input type="email" placeholder="Email"
+                    class="bg-gray-100 border border-gray-300 rounded-lg w-full p-3 mb-4 focus:outline-none focus:ring-2 focus:ring-indigo-500" />
+                <input type="password" placeholder="Password"
+                    class="bg-gray-100 border border-gray-300 rounded-lg w-full p-3 mb-4 focus:outline-none focus:ring-2 focus:ring-indigo-500" />
+                <a href="#" class="text-gray-600 text-sm hover:text-indigo-600 transition-all mb-4">Forgot your
+                    password?</a>
+                <button
+                    class="bg-indigo-600 text-white font-bold uppercase text-sm px-10 py-3 rounded-full hover:bg-indigo-700 transition-all duration-300 shadow-lg hover:shadow-md">Sign
+                    In</button>
+                <p class="text-gray-600 text-sm mt-4">
+                    Don't have an account?
+                    <span id="signUpLink"
+                        class="font-bold text-indigo-600 hover:text-indigo-700 cursor-pointer transition-all">Sign
+                        Up</span>
+                </p>
+            </form>
+        </div>
+
+        <!-- Overlay -->
+        <div class="overlay-container">
+            <div class="overlay rounded-2xl">
+                <!-- Left Overlay Panel (Shown on Sign In) -->
+                <div class="overlay-panel overlay-left">
+                    <div class="p-10 w-full"
+                        style="margin-top: 5px; margin-left: 5px; margin-bottom: 5px; border-radius: 1.5rem;">
+                        <h1 class="text-3xl font-bold mb-4">Hello There!</h1>
+                        <p class="text-lg leading-relaxed mb-6 px-4">Enter your personal details and start your journey
+                            with us</p>
+                        <button id="signUp"
+                            class="border-2 border-white text-white font-bold uppercase text-sm px-10 py-3 rounded-full hover:bg-white hover:text-indigo-600 transition-all duration-300">Sign
+                            Up</button>
+                    </div>
+                </div>
+                <!-- Right Overlay Panel (Shown on Sign Up) -->
+                <div class="overlay-panel overlay-right">
+                    <div class="p-10 w-full"
+                        style="margin-top: 5px; margin-right: 5px; margin-bottom: 5px; border-radius: 1.5rem;">
+                        <h1 class="text-3xl font-bold mb-4">Welcome Back!</h1>
+                        <p class="text-lg leading-relaxed mb-6 px-4">To keep connected with us please login with your
+                            personal info</p>
+                        <button id="signIn"
+                            class="border-2 border-white text-white font-bold uppercase text-sm px-10 py-3 rounded-full hover:bg-white hover:text-indigo-600 transition-all duration-300">Sign
+                            In</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>
